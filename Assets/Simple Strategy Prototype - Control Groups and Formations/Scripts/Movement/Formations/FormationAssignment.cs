@@ -50,16 +50,19 @@ public class FormationAssignment : MonoBehaviour
 
     public void SetSelectedsFormationsByMajorityVote()
     {
-        List<Formationable> allFormationablesInSelectables = GetFormationablesFromSelectables();
-
-        BaseFormationPreset majorityPreset = allFormationablesInSelectables.GroupBy(x => x.MyFormationPreset)
-                           .OrderByDescending(g => g.Count())
-                           .Last()
-                           .Key;
-
-        foreach (Formationable formationable in allFormationablesInSelectables)
+        if (SelectionLists.instance.GetAllSelected().Count > 0)
         {
-            formationable.MyFormationPreset = majorityPreset;
+            List<Formationable> allFormationablesInSelectables = GetFormationablesFromSelectables();
+
+            BaseFormationPreset majorityPreset = allFormationablesInSelectables.GroupBy(x => x.MyFormationPreset)
+                               .OrderBy(g => g.Count())
+                               .Last()
+                               .Key;
+
+            foreach (Formationable formationable in allFormationablesInSelectables)
+            {
+                formationable.MyFormationPreset = majorityPreset;
+            }
         }
     }
 

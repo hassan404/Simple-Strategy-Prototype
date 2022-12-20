@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: LineFormationPreset
   m_EditorClassIdentifier: 
   rowColumnType: 0
-  interUnitDistance: 2
+  interUnitDistance: 1.5

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SquareFormationPreset
   m_EditorClassIdentifier: 
   rowColumnType: 1
-  interUnitDistance: 2
+  interUnitDistance: 1.5

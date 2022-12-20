@@ -25,14 +25,14 @@ public class ControlGroupInput : MonoBehaviour
             {
                 if (kboard[controlGroup.key].wasPressedThisFrame)
                 {
-                    
+                    print($"Pressed:{controlGroup.key}");
                     foreach(Selectable selectable in controlGroup.assignedSelectables)
                     {
                         selectable.RemoveControlGroupName(controlGroup.key.ToString());
                     }
                     //assign control group to key, remove old assignment
                     controlGroup.assignedSelectables.Clear();
-                    controlGroup.assignedSelectables = selectionLists.GetAllSelected();
+                    controlGroup.assignedSelectables.AddRange(selectionLists.GetAllSelected());
 
                     foreach (Selectable selectable in controlGroup.assignedSelectables)
                     {
@@ -52,7 +52,6 @@ public class ControlGroupInput : MonoBehaviour
                     {
                         selectionLists.RemoveAllSelected();
                         selectionLists.AddSelecteds(controlGroup.assignedSelectables);
-                        selectionLists.OnSelectionChanged?.Invoke();
                     }
                 }
             }

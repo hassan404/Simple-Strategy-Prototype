@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: RectFormationPreset
   m_EditorClassIdentifier: 
   rowColumnType: 2
-  interUnitDistance: 2
+  interUnitDistance: 1.5

@@ -6,7 +6,7 @@ public class SimpleMoveable : MonoBehaviour, IMoveable
 {
     private Vector3 target;
     [SerializeField]
-    private float moveSpeed = 5f;
+    private float moveSpeed = 10f;
     [SerializeField]
     private float rotationSpeed = 100f;
     [SerializeField]

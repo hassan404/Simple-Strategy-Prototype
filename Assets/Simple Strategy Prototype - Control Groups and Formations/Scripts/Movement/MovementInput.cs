@@ -40,7 +40,7 @@ public class MovementInput : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
-            Debug.Log($"Move to:{hit.point}" );
+            //Debug.Log($"Move to:{hit.point}" );
             return hit.point;
         }
 
