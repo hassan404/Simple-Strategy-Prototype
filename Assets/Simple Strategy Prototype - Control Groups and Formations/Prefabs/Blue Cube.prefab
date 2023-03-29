@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 2093989679255098985}
   - component: {fileID: 2093989679255098984}
   - component: {fileID: 2093989679255098967}
-  - component: {fileID: 2093989679255098966}
+  - component: {fileID: 4235997524295865565}
   m_Layer: 5
   m_Name: CanvasHUD
   m_TagString: Untagged
@@ -194,6 +194,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -237,7 +238,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2093989679255098966
+--- !u!114 &4235997524295865565
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,7 +247,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2093989679255098964}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c2106b95d06f13428d647b50be02c66, type: 3}
+  m_Script: {fileID: 397118193, guid: 5f7970dbf2abefc44afcdf25c7e34dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2093989679634215150
@@ -345,9 +346,9 @@ GameObject:
   - component: {fileID: 2093989679811064075}
   - component: {fileID: 2093989679811064074}
   - component: {fileID: 2093989679811064073}
-  - component: {fileID: 2093989679811064072}
-  - component: {fileID: 2093989679811064311}
-  - component: {fileID: 2093989679811064310}
+  - component: {fileID: 3846691777399519915}
+  - component: {fileID: 3027693942507898540}
+  - component: {fileID: 5729008077605124103}
   m_Layer: 0
   m_Name: Blue Cube
   m_TagString: Untagged
@@ -430,9 +431,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093989679811064309}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &2093989679811064073
@@ -457,7 +466,7 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 0
---- !u!114 &2093989679811064072
+--- !u!114 &3846691777399519915
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -466,12 +475,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2093989679811064309}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eefe56c1af012f488efa30fc5c90bbf, type: 3}
+  m_Script: {fileID: 198880617, guid: 5f7970dbf2abefc44afcdf25c7e34dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   selectionVisuals: {fileID: 2093989679634215150}
   controlGroupText: {fileID: 2093989678233442252}
---- !u!114 &2093989679811064311
+--- !u!114 &3027693942507898540
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -480,12 +489,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2093989679811064309}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3e8c16e0dfc56d4ead4e871fb1a2353, type: 3}
+  m_Script: {fileID: 975893814, guid: 5f7970dbf2abefc44afcdf25c7e34dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   collisionRadius: 0.5
-  myFormationPreset: {fileID: 0}
---- !u!114 &2093989679811064310
+  myFormationPreset: {fileID: 11400000, guid: 85f2e7ed26a8dcf468de88988620eace, type: 2}
+--- !u!114 &5729008077605124103
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -494,7 +503,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2093989679811064309}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e064760b52e84d74da336145a86bc7a5, type: 3}
+  m_Script: {fileID: 1271745567, guid: 5f7970dbf2abefc44afcdf25c7e34dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movementParameters:
@@ -502,3 +511,4 @@ MonoBehaviour:
     acceleration: 10
     rotationSpeed: 100
     stopAtDist: 0.5
+    collisionRadius: 0.5

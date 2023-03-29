@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a50f0f814f383f4cb12d3f4468a790e, type: 3}
+  m_Script: {fileID: 10089779, guid: 5f7970dbf2abefc44afcdf25c7e34dc0, type: 3}
   m_Name: SquareFormationPreset
   m_EditorClassIdentifier: 
   rowColumnType: 1
-  interUnitDistance: 1.5
+  interUnitDistance: 2

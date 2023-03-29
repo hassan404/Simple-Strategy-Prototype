@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 8450334838289798011}
   - component: {fileID: 4123687430877830702}
   - component: {fileID: 2007887646501400550}
-  - component: {fileID: 8013338121809150857}
+  - component: {fileID: 1181061667801107265}
   m_Layer: 5
   m_Name: CanvasHUD
   m_TagString: Untagged
@@ -142,6 +142,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -185,7 +186,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &8013338121809150857
+--- !u!114 &1181061667801107265
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,7 +195,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2283644011130296705}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c2106b95d06f13428d647b50be02c66, type: 3}
+  m_Script: {fileID: 397118193, guid: 5f7970dbf2abefc44afcdf25c7e34dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4039731903728332412
@@ -210,9 +211,9 @@ GameObject:
   - component: {fileID: 4039731903728332414}
   - component: {fileID: 4039731903728332413}
   - component: {fileID: 4025289019753497321}
-  - component: {fileID: 8762840674498734744}
-  - component: {fileID: 2939860520152237800}
-  - component: {fileID: 2603559000912847138}
+  - component: {fileID: 7562514494942399245}
+  - component: {fileID: 8017051155130417624}
+  - component: {fileID: 6069139715684094787}
   m_Layer: 0
   m_Name: Blue Capsule
   m_TagString: Untagged
@@ -295,8 +296,17 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4039731903728332412}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
+  serializedVersion: 2
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -323,7 +333,7 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 0
---- !u!114 &8762840674498734744
+--- !u!114 &7562514494942399245
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -332,26 +342,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4039731903728332412}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eefe56c1af012f488efa30fc5c90bbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectionVisuals: {fileID: 1249940633169416791}
-  controlGroupText: {fileID: 4149953399035381620}
---- !u!114 &2939860520152237800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4039731903728332412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3e8c16e0dfc56d4ead4e871fb1a2353, type: 3}
+  m_Script: {fileID: 975893814, guid: 5f7970dbf2abefc44afcdf25c7e34dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   collisionRadius: 0.5
-  myFormationPreset: {fileID: 0}
---- !u!114 &2603559000912847138
+  myFormationPreset: {fileID: 11400000, guid: 85f2e7ed26a8dcf468de88988620eace, type: 2}
+--- !u!114 &8017051155130417624
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -360,7 +356,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4039731903728332412}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e064760b52e84d74da336145a86bc7a5, type: 3}
+  m_Script: {fileID: -488663135, guid: 5f7970dbf2abefc44afcdf25c7e34dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movementParameters:
@@ -368,6 +364,21 @@ MonoBehaviour:
     acceleration: 10
     rotationSpeed: 100
     stopAtDist: 0.5
+    collisionRadius: 0.5
+--- !u!114 &6069139715684094787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4039731903728332412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 198880617, guid: 5f7970dbf2abefc44afcdf25c7e34dc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectionVisuals: {fileID: 1249940633169416791}
+  controlGroupText: {fileID: 4149953399035381620}
 --- !u!1 &8499382508231408098
 GameObject:
   m_ObjectHideFlags: 0
