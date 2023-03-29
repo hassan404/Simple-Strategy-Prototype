@@ -24,12 +24,15 @@ public class MovementInput : MonoBehaviour
             if (clickPos != Vector3.zero)
             {
                 List<Formationable> selectedFormationables = formationAssignment.GetFormationablesFromSelectables();
-                List<Vector3> offsets = selectedFormationables[0].
-                    MyFormationPreset.GetFormationOffsets(selectedFormationables.Count);
-                for (int i = 0; i < selectedFormationables.Count; i++)
+                if (selectedFormationables.Count > 0)
                 {
-                    //print(offsets[i]);
-                    selectedFormationables[i].GetComponent<IMoveable>().Move(clickPos + offsets[i]);
+                    List<Vector3> offsets = selectedFormationables[0].
+                        MyFormationPreset.GetFormationOffsets(selectedFormationables.Count);
+                    for (int i = 0; i < selectedFormationables.Count; i++)
+                    {
+                        //print(offsets[i]);
+                        selectedFormationables[i].GetComponent<IMoveable>().Move(clickPos + offsets[i]);
+                    }
                 }
             }
         }

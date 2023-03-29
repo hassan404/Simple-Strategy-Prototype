@@ -26,5 +26,4 @@ public class FormationLists : MonoBehaviour
     {
         return formationInputPreset.FormationPresetAndKeyList;
     }
-
 }

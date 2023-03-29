@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 2007887646501400550}
   - component: {fileID: 8013338121809150857}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: CanvasHUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 2939860520152237800}
   - component: {fileID: 2603559000912847138}
   m_Layer: 0
-  m_Name: Blue Unit
+  m_Name: Blue Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -322,7 +322,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 1
+  m_ObstacleAvoidanceType: 0
 --- !u!114 &8762840674498734744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,6 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3e8c16e0dfc56d4ead4e871fb1a2353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collisionRadius: 0.5
   myFormationPreset: {fileID: 0}
 --- !u!114 &2603559000912847138
 MonoBehaviour:
@@ -362,9 +363,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e064760b52e84d74da336145a86bc7a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
-  rotationSpeed: 100
-  stopAtDist: 0.5
+  movementParameters:
+    moveSpeed: 10
+    acceleration: 10
+    rotationSpeed: 100
+    stopAtDist: 0.5
 --- !u!1 &8499382508231408098
 GameObject:
   m_ObjectHideFlags: 0

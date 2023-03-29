@@ -8,4 +8,5 @@ public abstract class BaseFormationPreset: ScriptableObject
     {
         return Enumerable.Repeat(Vector3.zero, count).ToList();
     }
+
 }

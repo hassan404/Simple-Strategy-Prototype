@@ -4,40 +4,33 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class NavMeshMoveable : MonoBehaviour, IMoveable
+public class NavMeshMoveable : Moveable
 {
-    [SerializeField]
-    private float moveSpeed = 10f;
-    [SerializeField]
-    private float acceleration = 10f;
-    [SerializeField]
-    private float rotationSpeed = 100f;
-    [SerializeField]
-    private float stopAtDist = 0.5f;
-
     private NavMeshAgent myAgent;
 
     private void Awake()
     {
         myAgent = GetComponent<NavMeshAgent>();
-        myAgent.speed = moveSpeed;
-        myAgent.angularSpeed = rotationSpeed;
-        myAgent.stoppingDistance = stopAtDist;
-        myAgent.acceleration = acceleration;
+
+        myAgent.speed = movementParameters.moveSpeed;
+        myAgent.angularSpeed = movementParameters.rotationSpeed;
+        myAgent.stoppingDistance = movementParameters.stopAtDist;
+        myAgent.acceleration = movementParameters.acceleration;
+        myAgent.radius = movementParameters.collisionRadius;
     }
 
-    public void Move(Vector3 target)
+    public override void Move(Vector3 target)
     {
         myAgent.SetDestination(target);
         myAgent.isStopped = false;
     }
 
-    public void Stop()
+    public override void Stop()
     {
         myAgent.isStopped = true;
     }
 
-    public void Teleport(Vector3 target)
+    public override void Teleport(Vector3 target)
     {
         myAgent.Warp(target);
     }
