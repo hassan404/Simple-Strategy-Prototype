@@ -4,7 +4,10 @@ PluginImporter:
   externalObjects: {}
   serializedVersion: 2
   iconMap: {}
-  executionOrder: {}
+  executionOrder:
+    SimpleRTS.ControlGroupLists: -10
+    SimpleRTS.FormationLists: -20
+    SimpleRTS.SelectionLists: -50
   defineConstraints: []
   isPreloaded: 0
   isOverridable: 0
