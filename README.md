@@ -13,5 +13,6 @@ Work In Progress
 - Combat System (Weapons, defenses, melee and ranged attacks)
 - Group System (tying and untying group of units to act like group, and to work with formation system)
 
-Demo of current system in action
-https://youtu.be/PgVXYvUeLJI
+[Demo of current system in action](https://youtu.be/PgVXYvUeLJI)
+
+
