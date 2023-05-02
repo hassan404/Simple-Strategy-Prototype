@@ -1,5 +1,5 @@
 # Simple Strategy Prototype
-## Source code for initial version of Simple Strategy Prototype
+## Source code for initial version of Simple Strategy Prototype in Unity Game Engine
 
 Contains basic functionalities of
 
